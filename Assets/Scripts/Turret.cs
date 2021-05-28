@@ -184,7 +184,6 @@ public class Turret : MonoBehaviour {
 
         for (int i = 0; i < 10; i++)
         {
-            Debug.Log(i);
             Vector3 spawnpoint = firePoint.position + dir * i/10 * Vector3.Distance(firePoint.position, target.position);
             Instantiate(particles, spawnpoint, Quaternion.identity);
         }

@@ -29,6 +29,8 @@ public class Movement : MonoBehaviour {
 		// Multiply by speed because we want to move at that speed(obviously)
 		// Time.deltaTime in order to notmalize for framerate
 		transform.Translate (dir.normalized * enemy.speed * Time.deltaTime, Space.World);
+		Vector3 transformToLookAt = new Vector3(target.position.x, target.position.y, this.transform.position.z);
+		transform.LookAt(transformToLookAt);
 
 		if (Vector3.Distance (transform.position, target.position) <= 0.5f) {
 			GetNextWaypoint ();

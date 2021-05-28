@@ -61,11 +61,11 @@ public class WaveSpawner : MonoBehaviour {
 
         if (randomizer >= 5)
         {
-            Instantiate(enemyStrongPrefab, spawnPoint.position, spawnPoint.rotation);
+            Instantiate(enemyStrongPrefab, spawnPoint.position, enemyStrongPrefab.rotation);
         }
         else
         {
-            Instantiate(enemyWeakPrefab, spawnPoint.position, spawnPoint.rotation);
+            Instantiate(enemyWeakPrefab, spawnPoint.position, enemyWeakPrefab.rotation);
         }
 	}
 }

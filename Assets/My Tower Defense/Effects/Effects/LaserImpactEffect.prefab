@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4049505771930462}
   - component: {fileID: 198396509733900066}
   - component: {fileID: 199354731154293982}
+  - component: {fileID: 6105711600668996206}
   m_Layer: 0
   m_Name: LaserImpactEffect
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718997522916726}
-  m_LocalRotation: {x: 0.17980674, y: 0.77807325, z: -0.2570642, w: 0.544233}
-  m_LocalPosition: {x: -0.4835019, y: 2.1339931, z: -1.8009137}
+  m_LocalRotation: {x: -0.11880464, y: 0.8285597, z: 0.19214548, w: 0.5123031}
+  m_LocalPosition: {x: 1.5700943, y: 5.630272, z: -2.8025026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4740,3 +4741,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6105711600668996206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718997522916726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd2d9213efcad3140ae6c42d6c01edd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
