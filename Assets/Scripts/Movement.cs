@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour {
 	{
 		enemy = GetComponent<Enemy>();
 		target = Waypoints.points [0];
+		this.GetComponentInChildren<Animator>().SetBool("isWalking", true);
 	}
 	// Update is called once per frame
 	

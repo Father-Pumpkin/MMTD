@@ -16,7 +16,8 @@ public class Turret : MonoBehaviour {
 	public string description;
     public GameObject rangeIndicator;
     public bool canFire = true;
-    
+    public bool hasAnimations = false;
+    public Animator m_Animator;
 
 
 	[Header("Use Bullets (default)")]
@@ -57,7 +58,12 @@ public class Turret : MonoBehaviour {
 	void Start () {
         targetRange = range/2;
         InvokeRepeating ("UpdateTarget", 0f, 0.5f);
-	}
+        if (hasAnimations)
+        {
+            m_Animator = gameObject.GetComponentInChildren<Animator>();
+            m_Animator.SetFloat("BulletSpeed", fireRate);
+        }
+    }
 
 
 	void UpdateTarget ()
@@ -112,7 +118,7 @@ public class Turret : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if (target == null) {
+        if (target == null) {
 			if (useLaser) {
 				if (lineRenderer.enabled) {
 					lineRenderer.enabled = false;
@@ -192,7 +198,13 @@ public class Turret : MonoBehaviour {
 	void Shoot(){
         if(bulletPreFab == null || target == null)
         {
+
             return;
+        }
+        if (hasAnimations)
+        {
+            m_Animator.SetTrigger("Shoot");
+            
         }
 		GameObject bulletGO = (GameObject)Instantiate (bulletPreFab, firePoint.position, firePoint.rotation);
 		Bullet bullet = bulletGO.GetComponent<Bullet> ();
@@ -202,7 +214,8 @@ public class Turret : MonoBehaviour {
             bullet.setParent(this);
             bullet.Seek(target);
         }
-	}
+
+    }
 
 	void OnDrawGizmosSelected()
 	{

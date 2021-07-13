@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class Shop : MonoBehaviour {
-	public TurretBlueprint Crossbow;
+	public TurretBlueprint RubberDucky;
 	public TurretBlueprint Catapult;
 	public TurretBlueprint MudSlinger;
     public TurretBlueprint Collector;
@@ -13,8 +13,8 @@ public class Shop : MonoBehaviour {
 	}
 
 
-	public void SelectCrossbow() {
-		buildManager.SelectTurretToBuild (Crossbow);
+	public void SelectRubberDucky() {
+		buildManager.SelectTurretToBuild (RubberDucky);
 	}
 
 	public void SelectCatapult() {

@@ -966,26 +966,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6ed134cd5fef946835c977fc63a9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Crossbow:
-    prefab: {fileID: 1978891271982690, guid: 0cc4fd6aa1297df4a93b7bef30ea2ecb, type: 3}
-    cost: 250
-    name: Crossbow
-    turretDescription: Standard turret which does moderate damage to a single target
+  RubberDucky:
+    prefab: {fileID: 3784475856693588067, guid: 8d4e0075e903b634fb08d21ab89cbc8f,
+      type: 3}
+    cost: 300
+    name: Rubber Ducky
+    turretDescription: Cleans up the enemies one at a time!
     damage: 10
     range: 3
     attackSpeed: 4
-    refundAmount: 100
+    refundAmount: 125
     rangeIndicator: {fileID: 0}
-    upgradedPrefab: {fileID: 1978891271982690, guid: 287675981191a874aa972f7dbbf0435c,
-      type: 3}
-    altUpgradedPrefab: {fileID: 1978891271982690, guid: 287675981191a874aa972f7dbbf0435c,
-      type: 3}
-    upgradeCost: 0
-    UpgradedProjectilePrefab: {fileID: 1502939811841352, guid: 8010c6a66801d1b4285e4571a9bb1734,
-      type: 3}
-    AltUpgradedProjectilePrefab: {fileID: 1502939811841352, guid: 8010c6a66801d1b4285e4571a9bb1734,
-      type: 3}
-    projectileUpgradeCost: 150
+    upgradedPrefab: {fileID: 0}
+    altUpgradedPrefab: {fileID: 0}
+    upgradeCost: 500
+    UpgradedProjectilePrefab: {fileID: 0}
+    AltUpgradedProjectilePrefab: {fileID: 0}
+    projectileUpgradeCost: 0
   Catapult:
     prefab: {fileID: 1909054745797690, guid: a939cc132f66c5c44933db36598e2837, type: 3}
     cost: 300
@@ -14226,7 +14223,7 @@ GameObject:
   - component: {fileID: 769972977}
   - component: {fileID: 769972976}
   m_Layer: 5
-  m_Name: Crossbow
+  m_Name: RubberDucky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14242,8 +14239,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1524985314}
+  m_Children: []
   m_Father: {fileID: 53293772}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14296,7 +14292,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 53293773}
-        m_MethodName: SelectCrossbow
+        m_MethodName: SelectRubberDucky
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14335,8 +14331,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9da69eedb6e73c84a85953f68f17a845, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -27874,79 +27870,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf62f6ee2f842d84ab71c08862a1d233, type: 3}
---- !u!1 &1524985313
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1524985314}
-  - component: {fileID: 1524985316}
-  - component: {fileID: 1524985315}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1524985314
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524985313}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 769972975}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.75499, y: 17}
-  m_SizeDelta: {x: 73.49, y: 71.73}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1524985315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524985313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b5bed10d3e72534285b2103988af667, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1524985316
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524985313}
-  m_CullTransparentMesh: 0
 --- !u!1001 &1525270391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29260,7 +29183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1ba5548dd82ec4bac2e2e33799bc93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
+  startMoney: 3000
   startLives: 25
   startMana: 0
   roundsPublic: 0
