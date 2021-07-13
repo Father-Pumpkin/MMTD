@@ -52,7 +52,7 @@ MonoBehaviour:
   canFire: 1
   hasAnimations: 1
   m_Animator: {fileID: 0}
-  bulletPreFab: {fileID: 1116721588798210, guid: dac65ff5f796b8146a1b6289dc4f5e38,
+  bulletPreFab: {fileID: 426604593405446820, guid: 20f18e7784d7d2b42858db9f2ecee77e,
     type: 3}
   fireRate: 2
   useLaser: 0
