@@ -102,7 +102,10 @@ public class Node : MonoBehaviour
 			buildManager.SelectNode(this);
 
             currentRange = turret.GetComponent<Turret>().rangeIndicator;
-            currentRange.SetActive(true);
+			if (currentRange != null)
+			{
+				currentRange.SetActive(true);
+			}
             stayOn = true;
 			return;
 		}
