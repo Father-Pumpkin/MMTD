@@ -50,7 +50,7 @@ MonoBehaviour:
   description: Cleans up the enemies one at a time!
   rangeIndicator: {fileID: 0}
   canFire: 1
-  hasAnimations: 1
+  hasAnimations: 0
   m_Animator: {fileID: 0}
   bulletPreFab: {fileID: 426604593405446820, guid: 20f18e7784d7d2b42858db9f2ecee77e,
     type: 3}
@@ -71,7 +71,8 @@ MonoBehaviour:
   partToRotate: {fileID: 206727313471406704}
   partToTurn: {fileID: 206727313471406704}
   turnSpeed: 10
-  firePoint: {fileID: 5948867564324514862}
+  firePointArray:
+  - {fileID: 5948867564324514862}
 --- !u!95 &3443639546376828442
 Animator:
   serializedVersion: 3
@@ -116,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 6694080566073040118}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
   m_LocalPosition: {x: -1.59, y: 0.88, z: 0.01}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8793914892649663496}
   m_RootOrder: 4

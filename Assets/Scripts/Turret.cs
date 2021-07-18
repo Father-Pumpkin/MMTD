@@ -51,11 +51,16 @@ public class Turret : MonoBehaviour {
 	
 
 
-	public Transform firePoint;
+	public Transform[] firePointArray;
+    private Transform firePoint;
 
 
 	// Use this for initialization
 	void Start () {
+        if(firePointArray.Length == 1)
+        {
+            firePoint = firePointArray[0];
+        }
         targetRange = range/2;
         InvokeRepeating ("UpdateTarget", 0f, 0.5f);
         if (hasAnimations)
@@ -206,13 +211,17 @@ public class Turret : MonoBehaviour {
             m_Animator.SetTrigger("Shoot");
             
         }
-		GameObject bulletGO = (GameObject)Instantiate (bulletPreFab, firePoint.position, firePoint.rotation);
-		Bullet bullet = bulletGO.GetComponent<Bullet> ();
-
-        if (bullet != null)
+        foreach (Transform fp in firePointArray)
         {
-            bullet.setParent(this);
-            bullet.Seek(target);
+            GameObject bulletGO = (GameObject)Instantiate(bulletPreFab, fp.position, fp.rotation);
+            bulletGO.transform.localScale = fp.localScale;
+            Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+            if (bullet != null)
+            {
+                bullet.setParent(this);
+                bullet.Seek(target);
+            }
         }
 
     }
